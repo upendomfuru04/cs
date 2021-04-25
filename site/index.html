@@ -21,42 +21,109 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
     }
-	 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 80%;
-  align-items: left;
-  }
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-.button {
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
+    .show_menu_btn {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.3em;
   cursor: pointer;
-}
-
-.button1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #d6bd60;
-}
-
-.button1:hover {
-  background-color: #d6bd60;
+  text-align: center;
+  background-color:#272727;
+  border-radius: 50px;
   color: white;
+  
 }
-ul {
+
+#nav ul { margin: 1em 0; }
+
+#nav ul li { padding: 0.5em; }
+
+#nav ul a {
+  display: block;
+  font-size: 1em;
+  color: #eee;
+  border-bottom: none;
+  text-align: left;
+}
+
+.courses-container {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 99vh;
+  margin: 0;
+}
+
+.course {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  width: 650px;
+}
+
+.course h5{
+  opacity: 0.6;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.course h2 {
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+
+
+.course-info {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+.btn {
+  background-color: #2A265F;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 25px;
+  bottom: 30px;
+  right: 30px;
+  letter-spacing: 1px;
+}
+
+.course-info ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
+
+.course-info ul li {
+  margin: 0 10px;
+}
+
+.course-info ul li a {
+  border-radius: 50%;
+  color: #001F61;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
 .can{
   font-family: 'poppins', sans-serif;
   margin: 20px 40px;
@@ -92,6 +159,49 @@ ul {
   font-size: 20px;
 }
 
+
+@media screen and (max-width: 1000px) {
+
+.no-js .show_menu_btn { display: none; }
+
+.no-js #nav ul { display: block; }
+
+.js .show_menu_btn { display: block; }
+
+.js #nav ul { display: none; }
+
+}
+
+@media screen and (min-width: 1500px) {
+
+.show_menu_btn { display: none; }
+
+#nav ul { display: block; }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+#nav ul { display: block; }
+
+#nav ul li {
+  display: block;
+  text-align: left;
+  
+}
+}
+
+@media screen and (min-width:1500px) {
+
+#nav { overflow: hidden; }
+
+#nav ul li {
+  width: 7em;
+  float: left;
+  margin-right: 1em;
+}
+}
+
 </style>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid" >
@@ -115,17 +225,15 @@ ul {
       </ul>
     </div>
   </div>
-<nav class = "navbar navbar-inverse" role = "navigation">
-  <center>  <div class = "navbar-header" >
-      <button type = "button" class = "navbar-toggle" 
-         data-toggle = "collapse"  data-target = "#example-navbar-collapse"  >
-         <span style="color: white" >Menu <i class="fa fa-long-arrow-down" aria-hidden="true" style="color: white"></i></span>
-      </button>
-   </div>
-   </center> 
-   <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
-	
-      <ul class = "nav navbar-nav">
+  <nav id="nav" role="navigation">
+  <div class="show_menu_btn" 
+       data-target="#nav ul" 
+       data-shown-text="Hide menu" 
+       data-hidden-text="Show menu">
+        Show menu
+
+  </div>
+  <ul>
         <li> <a href="#"><i class="fa fa-fw fa-home" aria-hidden="true"></i> Home</a></li>
            <li class = "dropdown">
             <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" >
@@ -134,7 +242,7 @@ ul {
             </a>
             
             <ul style="background-color:#ccc">
-            	<br>
+              <br>
                <li><a href = "#">Add Product</a></li>
                <br>
                <li><a href = "#">View Products</a></li>
@@ -143,7 +251,7 @@ ul {
          </li>
          <li> <a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Sales</a></li>
          <li> <a href="#"><i class="fa fa-money" aria-hidden="true"></i> Refunds</a></li>
-         <li> <a href="#"><i class="fa fa-fw fa-home" aria-hidden="true"></i> Coupons</a></li>
+         <li> <a href="#"><i class="ti-archive" aria-hidden="true"></i> Coupons</a></li>
          <li> <a href="#"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Orders</a></li>
          <li> <a href="#"><i class="fa fa-tags" aria-hidden="true"></i> Commissions</a></li>
          <li class = "dropdown">
@@ -153,7 +261,7 @@ ul {
             </a>
             
             <ul style="background-color:#ccc">
-            	<br>
+              <br>
                <li><a href = "#">Track Request</a></li>
                <br>
                <li><a href = "#">Withdrawal Form</a></li>
@@ -169,7 +277,7 @@ ul {
             </a>
             
             <ul style="background-color:#ccc">
-            	<br>
+              <br>
                <li><a href = "#">Shop Info</a></li>
                <br>
                <li><a href = "#">Payment Info</a></li>
@@ -180,40 +288,54 @@ ul {
          </li>
          <li> <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> Update Profile</a></li>
       </ul>
-   </div>
 </nav>
 </nav>
 
- 
-
-<div class="card">
- 
-  <div class="container">
-    
-    <h4><b>Welcome to GetValue Inc!</b></h4> 
-    <p>We’ve assembled some links to get you started:</p>
-     <h4>Get Started</h4>
-     <button class="button button1"><b> Update Profile</b></button>
-     <br>
+ <div class="courses-container">
+  <div class="course">
+    <div class="course-info">
+      
+      <h2>Welcome to GetValue Inc!</h2>
+      <h5>We’ve assembled some links to get you started:</h5>
+      <br>
+      <button class="btn"> Update Profile</button>
+  <br>
+  <br>
      <p>or <a href="#">change your password</a></p>
      <h4>Next Steps</h4>
      <ul>
-     	<li><a href="#"><i class="fa fa-registered" style="color: black" aria-hidden="true"></i> Add brand</a></li>
-     	<br>
-        <li><a href="#"><i class="fa fa-plus" style="color: black" aria-hidden="true"></i> Add product</a></li>
+      <li><a href="#"><i class="fa fa-registered" style="color:#868686" aria-hidden="true"></i>  Add brand</a></li>
+      <br>
+        <li><a href="#"><i class="fa fa-plus" style="color:#868686" aria-hidden="true"></i>  Add product</a></li>
         <br>
-        <li><a href="#"><i class="fa fa-list" style="color: black" aria-hidden="true"></i> view product</a></li>
+        <li><a href="#"><i class="fa fa-list" style="color:#868686" aria-hidden="true"></i>  view product</a></li>
      </ul>
      <h4>More Actions</h4>
      <ul>
-     	<li><a href="#"><i class="fa fa-cart-arrow-down" style="color: black" aria-hidden="true"></i> Order</a></li>
-     	<br>
-     	<li><a href="#"><i class="fa fa-tags" style="color: black" aria-hidden="true"></i> Commissions</a></li>
-     	<br>
-     	<li><a href="#"><i class="fa fa-shopping-bag" style="color: black" aria-hidden="true"></i> Payment Info</a></li>
+      <li><a href="#"><i class="fa fa-cart-arrow-down" style="color: #868686" aria-hidden="true"></i>  Order</a></li>
+      <br>
+      <li><a href="#"><i class="fa fa-tags" style="color: #868686" aria-hidden="true"></i>  Commissions</a></li>
+      <br>
+      <li><a href="#"><i class="fa fa-shopping-bag" style="color:#868686" aria-hidden="true"></i>  Payment Info</a></li>
      </ul>
+    </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  <div class="can" style="background-color:purple">
    
    <div class="profiles">
@@ -271,6 +393,21 @@ ul {
      </div>
      </div>
       </div>
+<script>
+  var show_menu = document.querySelector('.show_menu_btn');
 
+show_menu.addEventListener('click', function(event) {
+    var target = document.querySelector(show_menu.getAttribute('data-target'));
+
+    if (target.style.display == "none") {
+        target.style.display = "block";
+        show_menu.innerHTML = show_menu.getAttribute('data-shown-text');
+
+    } else {
+        target.style.display = "none";
+        show_menu.innerHTML = show_menu.getAttribute('data-hidden-text');
+    }
+});
+</script>
 </body>
 </html>
