@@ -22,7 +22,7 @@
       font-family: Arial, Helvetica, sans-serif;
     }
     .show_menu_btn {
-  width: 90%;
+  width: auto;
   margin: 0 auto;
   padding: 0.3em;
   cursor: pointer;
@@ -32,18 +32,56 @@
   color: white;
   
 }
-
-#nav ul { margin: 1em 0; }
-
-#nav ul li { padding: 0.5em; }
-
-#nav ul a {
-  display: block;
-  font-size: 1em;
-  color: #eee;
-  border-bottom: none;
-  text-align: left;
+nav {
+  margin: 0;
+  padding: 0;
 }
+
+
+.lev { 
+   float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.lev li {
+ margin: 0px;
+  float: left;
+ }
+
+.lev a {
+  padding: 0 20px;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 60px;
+  text-decoration: none;
+}
+nav ul li ul li:hover { background: #000000; }
+
+nav a:hover { background-color: #000000; }
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+}
+
+nav ul li:hover > ul { display: inherit; }
+
+nav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 170px;
+}
+
 
 .courses-container {
   font-family: 'Muli', sans-serif;
@@ -148,7 +186,7 @@
 
 
 .profile h5{
-	font-size: 28px;
+	font-size: 25px;
   font-weight: 100;
   letter-spacing: 3px;
 }
@@ -156,10 +194,8 @@
 .profile h3{
   margin-top: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 }
-
-
 @media screen and (max-width: 1000px) {
 
 .no-js .show_menu_btn { display: none; }
@@ -168,15 +204,39 @@
 
 .js .show_menu_btn { display: block; }
 
-.js #nav ul { display: none; }
+.js #nav ul { display: none;
+width: auto; 
+}
+nav ul li {
+  display: block;
+  width: 100%;
+}
 
+nav ul ul {
+  float: none;
+  position: static;
+  color: #;
+}
+
+nav ul ul li:hover > ul,
+nav ul li:hover > ul { display: none; }
+
+nav ul ul li {
+  display: block;
+  width: 100%;
+}
+
+nav ul ul ul li { position: static;
+
+}
 }
 
 @media screen and (min-width: 1500px) {
 
 .show_menu_btn { display: none; }
 
-#nav ul { display: block; }
+#nav ul { display: block;
+ width: 100%;}
 
 }
 
@@ -186,8 +246,23 @@
 
 #nav ul li {
   display: block;
-  text-align: left;
-  
+}
+nav ul ul {
+  float: none;
+  position: static;
+  color: ;
+}
+
+nav ul ul li:hover > ul,
+nav ul li:hover > ul { display: none; }
+
+nav ul ul li {
+  display: block;
+  width: 100%;
+}
+
+nav ul ul ul li { position: static;
+
 }
 }
 
@@ -197,10 +272,27 @@
 
 #nav ul li {
   width: 7em;
-  float: left;
-  margin-right: 1em;
+}
+nav ul ul {
+  float: none;
+  position: static;
+  background-color:;
+}
+
+nav ul ul li:hover > ul,
+nav ul li:hover > ul { display: none; }
+
+nav ul ul li {
+  display: block;
+  width: 100%;
+}
+
+nav ul ul ul li { position: static;
+
 }
 }
+
+
 
 </style>
 <nav class="navbar navbar-inverse">
@@ -225,15 +317,16 @@
       </ul>
     </div>
   </div>
+  
+  <header role="banner">
+
   <nav id="nav" role="navigation">
-  <div class="show_menu_btn" 
+      <div class="show_menu_btn"
        data-target="#nav ul" 
        data-shown-text="Hide menu" 
-       data-hidden-text="Show menu">
-        Show menu
-
-  </div>
-  <ul>
+       data-hidden-text="Show menu">Show menu</div>
+    
+   <ul class="lev">
         <li> <a href="#"><i class="fa fa-fw fa-home" aria-hidden="true"></i> Home</a></li>
            <li class = "dropdown">
             <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" >
@@ -241,8 +334,7 @@
                             <b class = "caret"></b>
             </a>
             
-            <ul style="background-color:#ccc">
-              <br>
+            <ul>
                <li><a href = "#">Add Product</a></li>
                <br>
                <li><a href = "#">View Products</a></li>
@@ -260,8 +352,7 @@
                             <b class = "caret"></b>
             </a>
             
-            <ul style="background-color:#ccc">
-              <br>
+            <ul>
                <li><a href = "#">Track Request</a></li>
                <br>
                <li><a href = "#">Withdrawal Form</a></li>
@@ -276,8 +367,7 @@
                             <b class = "caret"></b>
             </a>
             
-            <ul style="background-color:#ccc">
-              <br>
+            <ul>
                <li><a href = "#">Shop Info</a></li>
                <br>
                <li><a href = "#">Payment Info</a></li>
@@ -289,7 +379,9 @@
          <li> <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> Update Profile</a></li>
       </ul>
 </nav>
+</header>
 </nav>
+
 
  <div class="courses-container">
   <div class="course">
@@ -395,7 +487,19 @@
       </div>
 <script>
   var show_menu = document.querySelector('.show_menu_btn');
+var viewport_width = document.documentElement.clientWidth;
+var menu = document.querySelector('#nav ul');
+if ( viewport_width < 600 ) { menu.style.display = "none"; }
+window.addEventListener('resize', function(event) {
 
+  var new_viewport = document.documentElement.clientWidth;
+
+  if ( new_viewport > 599 ) {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
+});
 show_menu.addEventListener('click', function(event) {
     var target = document.querySelector(show_menu.getAttribute('data-target'));
 
