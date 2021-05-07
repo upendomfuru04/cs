@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<title>gastonngailo</title>
+		<title>gastonngailo</title>
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,8 +82,6 @@ nav ul ul ul li {
   top: -60px;
   left: 170px;
 }
-
-
 .courses-container {
   font-family: 'Muli', sans-serif;
   display: flex;
@@ -99,104 +97,82 @@ nav ul ul ul li {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   max-width: 100%;
-  margin: 20px;
+  margin: 10px;
   overflow: hidden;
   width: 650px;
 }
-
-.course h5{
-  opacity: 0.6;
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-.course h2 {
-  letter-spacing: 1px;
-  margin: 10px 0;
-}
-
-
 .course-info {
-  padding: 30px;
+  padding: 20px;
   position: relative;
   width: 100%;
 }
-.btn {
-  background-color: #2A265F;
-  border: 0;
-  border-radius: 50px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 16px;
-  padding: 12px 25px;
-  bottom: 30px;
-  right: 30px;
-  letter-spacing: 1px;
-}
 
-.course-info ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.course-info ul li {
-  margin: 0 10px;
-}
-
-.course-info ul li a {
+img{
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  color: #001F61;
-  font-size: 15px;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 50px;
-  text-decoration: none;
 }
 
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type=number], select, textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
 
+label {
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+}
 
-
-
-
-
-
-
-.can{
-  font-family: 'poppins', sans-serif;
-  margin: 20px 40px;
+input[type=submit] {
   color: white;
-  
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.profiles{
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 80px;
-}
-
-.profile{
-  flex-basis: 260px;
-}
 
 
-.profile:hover{
-  filter: grayscale(0);
-} 
 
 
-.profile h5{
-	font-size: 25px;
-  font-weight: 100;
-  letter-spacing: 3px;
-}
 
-.profile h3{
-  margin-top: 20px;
-  text-align: center;
-  font-size: 18px;
-}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1000px) {
 
 .no-js .show_menu_btn { display: none; }
@@ -230,6 +206,11 @@ nav ul ul li {
 nav ul ul ul li { position: static;
 
 }
+
+.col-25, .col-75 {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1500px) {
@@ -237,8 +218,12 @@ nav ul ul ul li { position: static;
 .show_menu_btn { display: none; }
 
 #nav ul { display: block;
- width: 100%;}
-
+          width: 100%;
+}
+.col-25, .col-75, {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -293,9 +278,9 @@ nav ul ul ul li { position: static;
 }
 }
 
-
-
 </style>
+</head>
+<body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid" >
     <div class="navbar-header">
@@ -335,7 +320,7 @@ nav ul ul ul li { position: static;
             </a>
             
             <ul>
-               <li><a href = "Product.html">Add Product</a></li>
+               <li><a href = "#">Add Product</a></li>
                <br>
                <li><a href = "#">View Products</a></li>
                <br>
@@ -414,142 +399,234 @@ nav ul ul ul li { position: static;
 </nav>
 
 
+
  <div class="courses-container">
   <div class="course">
     <div class="course-info">
-      
-      <h2>Welcome to GetValue Inc!</h2>
-      <h5>We’ve assembled some links to get you started:</h5>
-      <br>
-      <button class="btn"> Update Profile</button>
-  <br>
-  <br>
-     <p>or <a href="#">change your password</a></p>
-     <h4>Next Steps</h4>
-     <ul>
-      <li><a href="#"><i class="fa fa-registered" style="color:#868686" aria-hidden="true"></i>  Add brand</a></li>
-      <br>
-        <li><a href="#"><i class="fa fa-plus" style="color:#868686" aria-hidden="true"></i>  Add product</a></li>
-         <br>
-        <li><a href="#"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  Add blog post</a></li>
-        <br>
-        <li><a href="#"><i class="fa fa-list" style="color:#868686" aria-hidden="true"></i>  view product</a></li>
-     </ul>
-     <h4>More Actions</h4>
-     <ul>
-      <li><a href="#"><i class="fa fa-cart-arrow-down" style="color: #868686" aria-hidden="true"></i>  Order</a></li>
-      <br>
-      <li><a href="#"><i class="fa fa-tags" style="color: #868686" aria-hidden="true"></i>  Commissions</a></li>
-       <br>
-        <li><a href="#"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  My post</a></li>
-      <br>
-      <li><a href="#"><i class="fa fa-shopping-bag" style="color:#868686" aria-hidden="true"></i>  Payment Info</a></li>
-     </ul>
+      <i class="fa fa-list" aria-hidden="true">  Add/Update Product</i>
+     <hr>
+      <div class="row">
+      	<div class="col-md-12"></div>
+      <div class="form-group col-md-12">
+      <center>
+         <img src="zx.jpg" class="img-thumbnail avatarHolder m-b-1" id="img-current-holder1"  />
+             <div class="col-md-12">
+                <input type="file" name="image" id="avatarImg" style="display: none;"  accept="image/*" src="" />
+                <br>
+               <label for="avatarImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Change Image</span></label>
+                     </div>
+               <p><i><small>For better product display we recommend you to use product image size (ratio) should be 173px width and 225px height.</small></i></p>
+      </center>
+      </div>
+    </div>
+      <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Product Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="ProductName" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Brand:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="Brand" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Category:</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Select</option>
+          <option value="canada">Ebooks</option>
+          <option value="usa">Audiobooks</option>
+          <option value="usa">Online Training & Programs</option>
+        </select>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="lname">Price:</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="lname" name="tentacles">
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="lname">Quantity:</label>
+      </div>
+      <div class="col-75">
+       <input type="number" id="lname" name="tentacles">
+      </div>
+    </div>
+
+
+    
+
+
+
+
+
+
+     <div class="row">
+      <div class="col-25">
+        <label for="subject">Summary:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject"  style="height:80px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Description:</label>
+      </div>
+      <div class="col-75">
+      <textarea class="form-control summernote" name="description"></textarea>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-25">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+               <h4 class="panel-title">Preview Files</h4>
+        </div>
+           <div class="panel-body row">
+        <div class="form-group col-md-3">
+           <select class="form-control" name="preview_type">
+               <option value="">Select Type</option>
+               <option value="image" >Image</option>
+               <option value="pdf" >PDF</option>
+               <option value="audio" >Audio</option>
+               <option value="video" >Video</option>
+               <option value="docs" >Docs</option>
+           </select>
+            </div>
+               <div class="form-group col-md-6">
+                     <input type="text" id="previewHolder" readonly="" disabled="" class="form-control" placeholder="No file selected" value="">
+                           </div>
+                     <div class="form-group col-md-3">
+                      <label for="previewImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Upload</span></label>
+                       <a href="" id="previewLink" target="_blank" class="btn btn-sm btn-default"><i class="fa fa-search"></i></a>
+                      </div>
+                 </div>
+                   </div>
+                 </div>
+    </div>
+
+    
+
+
+
+
+
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Downloadable Media Type:</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Media File</option>
+          <option value="canada">Virtual Products Link</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Media Type:</label>
+      </div>
+           <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Select</option>
+          <option value="canada">Image</option>
+          <option value="usa">PDF</option>
+          <option value="usa">Audio</option>
+          <option value="usa">Video</option>
+           <option value="usa">Docs</option>
+        </select>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Media Type:</label>
+      </div>
+       <div class="col-75">
+     <input type="number" name="episode_count" class="form-control" value="1" id="episode_count" readonly="">
+     </div>
+    </div>
+    <br>
+        
+     <div class="row">
+      <div class="col-25">
+        <div class="panel panel-default">
+           <div class="panel-heading">
+               <h4 class="panel-title">Downloadable Media Files</h4>
+                  </div>
+           <div class="panel-body row">
+    <div id="mediaList">
+                   <div>
+         <div class="form-group col-md-4">
+     <input type="text"  name="media_file_name1" placeholder="File name" value="">
+     </div>
+      <div class="form-group col-md-5">
+          <input type="text"  id="mediaFile" disabled="" placeholder="No file selected" value="">
+          </div>
+            <div class="form-group col-md-3">
+          <label for="mediaImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Upload</span></label>
+         <a href="" id="mediaLink" target="_blank" class="btn btn-sm btn-default"><i class="fa fa-search"></i></a>
+              </div>
+          </div>
+             </div>
+         <div class="form-group col-md-12">
+          <a href="javascript:void();" class="btn btn-sm btn-default" onclick="addFile();"><i class="fa fa-plus"></i> Add File</a>
+            </div>
+                  </div>
+              </div>
+             </div>
+         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <div class="row">
+      <div class="col-25">
+        <label for="country">Product Status:</label>
+      </div>
+     <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Live Product</option>
+          <option value="canada">Pre-order Product</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit"  class="btn btn-success" value="Save">
+    </div>
+  </form>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <div class="can" style="background-color:#9400d3">
-   
-   <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Total Products</h3>
-       <center><h5>0 </h5></center>
-       <br>
-     	
-     </div>
-     </div>
-     </div>
-
-      <div class="can" style="background-color:#1569c7">
-   
-   <div class="profiles">
-     <div class="profile">
-      <br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i> Pending Posts </h3>
-       <center><h5>0 </h5></center>
-       <br>
-      
-     </div>
-     </div>
-     </div>
-     
-     <div class="can" style="background-color:#d80072">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-     	
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Pending Commissions</h3>
-       <center><h5>0 Tsh. </h5></center>
-       <br>
-     	
-     </div>
-     </div>
-      </div>
-
-       <div class="can" style="background-color:#488ac7">
-   
-   <div class="profiles">
-     <div class="profile">
-      <br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Approved Posts</h3>
-       <center><h5>0 </h5></center>
-       <br>
-      
-     </div>
-     </div>
-     </div>
-
-
-
-      <div class="can" style="background-color:#00bd58">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-     	
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Paid Commissions</h3>
-       <center><h5>0 Tsh. </h5></center>
-       <br>
-     	
-     </div>
-   </div>
- </div>
-   <div class="can" style="background-color:orange">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Pending Orders</h3>
-       <center><h5>0 </h5></center>
-       <br>
-     </div>
-     </div>
-      </div>
-<div class="can" style="background-color:#1e90ff">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i> Complete Orders</h3>
-      <center><h5>0 </h5></center> 
-       <br>
-     </div>
-     </div>
-      </div>
-
 
 
 
@@ -607,5 +684,6 @@ show_menu.addEventListener('click', function(event) {
     }
 });
 </script>
+
 </body>
 </html>
