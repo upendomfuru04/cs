@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<title>gastonngailo</title>
+		<title>gastonngailo</title>
   <title></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+
+
 </head>
 <body>
 <style>
@@ -19,7 +24,7 @@
       box-sizing: border-box;
     }
     body {
-      font-family:  Arial, Helvetica,sans-serif;
+      font-family:  Arial, Helvetica, sans-serif;
     }
     .show_menu_btn {
   width: auto;
@@ -82,8 +87,6 @@ nav ul ul ul li {
   top: -60px;
   left: 170px;
 }
-
-
 .courses-container {
   font-family: 'Muli', sans-serif;
   display: flex;
@@ -99,104 +102,48 @@ nav ul ul ul li {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   max-width: 100%;
-  margin: 20px;
+  margin: 10px;
   overflow: hidden;
   width: 650px;
 }
-
-.course h5{
-  opacity: 0.6;
-  margin: 0;
-  letter-spacing: 1px;
-}
-
-.course h2 {
-  letter-spacing: 1px;
-  margin: 10px 0;
-}
-
-
 .course-info {
-  padding: 30px;
+  padding: 20px;
   position: relative;
   width: 100%;
 }
-.btn {
-  background-color: #2A265F;
-  border: 0;
-  border-radius: 50px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  font-size: 16px;
-  padding: 12px 25px;
-  bottom: 30px;
-  right: 30px;
-  letter-spacing: 1px;
-}
 
-.course-info ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.course-info ul li {
-  margin: 0 10px;
-}
-
-.course-info ul li a {
-  border-radius: 50%;
-  color: #001F61;
-  font-size: 15px;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 50px;
-  text-decoration: none;
-}
-
-
-
-
-
-
-
-
-
-.can{
-  font-family: 'poppins', sans-serif;
-  margin: 20px 40px;
-  color: white;
-  
-}
-
-.profiles{
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 80px;
-}
-
-.profile{
-  flex-basis: 260px;
-}
-
-
-.profile:hover{
-  filter: grayscale(0);
-} 
-
-
-.profile h5{
-	font-size: 25px;
-  font-weight: 100;
-  letter-spacing: 3px;
-}
-
-.profile h3{
-  margin-top: 20px;
+.button {
+  background-color:;
+  border:1px solid #111;
+  color: black;
+  padding: 15px 32px;
   text-align: center;
-  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 8px 4px;
+  cursor: pointer;
+  right: 30px;
+  border-radius: 10px;
 }
+
+.button:hover{
+   background-color: #ffffff;
+    border:1px solid #111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 1000px) {
 
 .no-js .show_menu_btn { display: none; }
@@ -230,6 +177,11 @@ nav ul ul li {
 nav ul ul ul li { position: static;
 
 }
+
+.col-25, .col-75 {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1500px) {
@@ -237,8 +189,12 @@ nav ul ul ul li { position: static;
 .show_menu_btn { display: none; }
 
 #nav ul { display: block;
- width: 100%;}
-
+          width: 100%;
+}
+.col-25, .col-75, {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -293,9 +249,9 @@ nav ul ul ul li { position: static;
 }
 }
 
-
-
 </style>
+</head>
+<body>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid" >
     <div class="navbar-header">
@@ -327,7 +283,7 @@ nav ul ul ul li { position: static;
        data-hidden-text="Show menu">Show menu</div>
     
    <ul class="lev">
-        <li> <a href="#"><i class="fa fa-fw fa-home" aria-hidden="true"></i> Home</a></li>
+        <li> <a href="index.html"><i class="fa fa-fw fa-home" aria-hidden="true"></i> Home</a></li>
            <li class = "dropdown">
             <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown" >
                <i class="fa fa-list" aria-hidden="true"></i> Products
@@ -337,7 +293,7 @@ nav ul ul ul li { position: static;
             <ul>
                <li><a href = "product.html">Add Product</a></li>
                <br>
-               <li><a href = "p2.html">View Products</a></li>
+               <li><a href = "#">View Products</a></li>
                <br>
             </ul>
          </li>
@@ -414,157 +370,78 @@ nav ul ul ul li { position: static;
 </nav>
 
 
- <div class="courses-container">
+
+
+
+
+
+
+
+
+
+                   <div class="courses-container">
   <div class="course">
     <div class="course-info">
-      
-      <h2>Welcome to GetValue Inc!</h2>
-      <h5>We’ve assembled some links to get you started:</h5>
-      <br>
-      <button class="btn"> Update Profile</button>
-  <br>
-  <br>
-     <p>or <a href="#">change your password</a></p>
-     <h4>Next Steps</h4>
-     <ul>
-      <li><a href="#"><i class="fa fa-registered" style="color:#868686" aria-hidden="true"></i>  Add brand</a></li>
-      <br>
-        <li><a href="#"><i class="fa fa-plus" style="color:#868686" aria-hidden="true"></i>  Add product</a></li>
-         <br>
-        <li><a href="#"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  Add blog post</a></li>
-        <br>
-        <li><a href="#"><i class="fa fa-list" style="color:#868686" aria-hidden="true"></i>  view product</a></li>
-     </ul>
-     <h4>More Actions</h4>
-     <ul>
-      <li><a href="#"><i class="fa fa-cart-arrow-down" style="color: #868686" aria-hidden="true"></i>  Order</a></li>
-      <br>
-      <li><a href="#"><i class="fa fa-tags" style="color: #868686" aria-hidden="true"></i>  Commissions</a></li>
-       <br>
-        <li><a href="#"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  My post</a></li>
-      <br>
-      <li><a href="#"><i class="fa fa-shopping-bag" style="color:#868686" aria-hidden="true"></i>  Payment Info</a></li>
-     </ul>
-    </div>
-  </div>
-</div>
+      <i class="fa fa-list" aria-hidden="true">   Product</i>
+                      <hr> 
+                        <div class="row">
+        <div class="col-md-12"></div>
+      <div class="form-group col-md-12">
+      <center>
 
 
+                    </div>
+                    <br>
+                    <center>
+                      <b>
+                    <button class="button">Copy</button>
+                    <button class="button">CSV</button>
+                    <button class="button">Excel</button>
+                    <button class="button">PDF</button>
+                    <button class="button">Print</button></b>
+                  </center>
+                    <div class="panel-body p40">
+                        <div class="table-responsive pt20 pb20">
+    <table id="table_id" class="display" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+                                        <th>S/N</th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Brand</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Reviews</th>
+                                        <th class="text-center">Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>S/N</th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Category</th>
+                                        <th>Brand</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Reviews</th>
+                                        <th class="text-center">Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                                                    </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <p class="sm-hint">Scroll horizontal to view more</p>
+                    </div>
+                </div>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
- <div class="can" style="background-color:#9400d3">
-   
-   <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Total Products</h3>
-       <center><h5>0 </h5></center>
-       <br>
-     	
-     </div>
-     </div>
-     </div>
-
-      <div class="can" style="background-color:#1569c7">
-   
-   <div class="profiles">
-     <div class="profile">
-      <br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i> Pending Posts </h3>
-       <center><h5>0 </h5></center>
-       <br>
-      
-     </div>
-     </div>
-     </div>
-     
-     <div class="can" style="background-color:#d80072">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-     	
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Pending Commissions</h3>
-       <center><h5>0 Tsh. </h5></center>
-       <br>
-     	
-     </div>
-     </div>
-      </div>
-
-       <div class="can" style="background-color:#488ac7">
-   
-   <div class="profiles">
-     <div class="profile">
-      <br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Approved Posts</h3>
-       <center><h5>0 </h5></center>
-       <br>
-      
-     </div>
-     </div>
-     </div>
-
-
-
-      <div class="can" style="background-color:#00bd58">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-     	
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Paid Commissions</h3>
-       <center><h5>0 Tsh. </h5></center>
-       <br>
-     	
-     </div>
-   </div>
- </div>
-   <div class="can" style="background-color:orange">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i>  Pending Orders</h3>
-       <center><h5>0 </h5></center>
-       <br>
-     </div>
-     </div>
-      </div>
-<div class="can" style="background-color:#1e90ff">
-      <div class="profiles">
-     <div class="profile">
-     	<br>
-       <h3><i class="fa fa-bar-chart" aria-hidden="true"></i> Complete Orders</h3>
-      <center><h5>0 </h5></center> 
-       <br>
-     </div>
-     </div>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+           
 
 
 
@@ -606,6 +483,24 @@ show_menu.addEventListener('click', function(event) {
         show_menu.innerHTML = show_menu.getAttribute('data-hidden-text');
     }
 });
+
+$(document)
+  .ready(function () {
+    $('#table_id')
+      .DataTable();
+  });
+
+  $('#table_id')
+  .DataTable({
+    "destroy": true, // In order to reinitialize the datatable
+    "pagination": true, // For Pagination
+    "sorting": true, // For sorting
+    "aaData": data,
+  });
+
+
+
+
 </script>
 </body>
 </html>

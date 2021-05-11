@@ -322,7 +322,7 @@ nav ul ul ul li { position: static;
             <ul>
                <li><a href = "#">Add Product</a></li>
                <br>
-               <li><a href = "#">View Products</a></li>
+               <li><a href = "p2.html">View Products</a></li>
                <br>
             </ul>
          </li>
@@ -532,28 +532,37 @@ nav ul ul ul li { position: static;
         <label for="country">Downloadable Media Type:</label>
       </div>
       <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Media File</option>
-          <option value="canada">Virtual Products Link</option>
-        </select>
+        <select class="form-control" name="downloadable_media_type" onchange="checkDFile();" id="downloadable_media_type">
+              <option value="downloadable" >Media File</option>
+             <option value="virtual" >Virtual Products Link</option>
+         </select>
       </div>
     </div>
+     
 
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Media Type:</label>
-      </div>
-           <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Select</option>
-          <option value="canada">Image</option>
-          <option value="usa">PDF</option>
-          <option value="usa">Audio</option>
-          <option value="usa">Video</option>
-           <option value="usa">Docs</option>
+   <div id="downloadable">
+     <div class="form-group col-md-6">
+     <label>Media Type:</label>
+       <select class="form-control" name="media_type">
+       <option value="">Select</option>
+       <option value="image" >Image</option>
+        <option value="pdf" >PDF</option>
+        <option value="audio" >Audio</option>
+       <option value="video" >Video</option>
+       <option value="docs" >Docs</option>
         </select>
-      </div>
-    </div>
+       </div>
+
+
+         <div id="virtual">
+     <div class="form-group col-md-12">
+         <label>Virtual Link</label>
+      <input type="text" name="virtual_link" class="form-control" placeholder="http://" value="">
+           </div>
+           </div>
+
+
+
 
 
 
@@ -683,6 +692,34 @@ show_menu.addEventListener('click', function(event) {
         show_menu.innerHTML = show_menu.getAttribute('data-hidden-text');
     }
 });
+
+
+ function checkDFile(){
+        var mtype=document.getElementById('downloadable_media_type').value;
+        if(mtype=='downloadable'){
+            $('#downloadable').css('display', 'block');
+            $('#virtual').css('display', 'none');
+        }else{
+            $('#virtual').css('display', 'block');
+            $('#downloadable').css('display', 'none');
+        }
+    }
+
+     function setFileName(input, holderID, prevLink, name_holder=""){
+        var file = input.files[0].name;
+        document.getElementById(holderID).value=file;
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            // $('#img-current-holder3').attr('src', e.target.result);
+            $('#'+prevLink).attr('href', e.target.result);
+                    }
+        reader.readAsDataURL(input.files[0]);
+    }
+
+
+
+
 </script>
 
 </body>
