@@ -529,15 +529,13 @@ nav ul ul ul li { position: static;
 
     <div class="row">
       <div class="col-25">
-        <label for="country">Downloadable Media Type:</label>
+        <label >Downloadable Media Type:</label>
       </div>
-      <div class="col-75">
         <select class="form-control" name="downloadable_media_type" onchange="checkDFile();" id="downloadable_media_type">
               <option value="downloadable" >Media File</option>
              <option value="virtual" >Virtual Products Link</option>
          </select>
       </div>
-    </div>
      
 
    <div id="downloadable">
@@ -552,31 +550,12 @@ nav ul ul ul li { position: static;
        <option value="docs" >Docs</option>
         </select>
        </div>
-
-
-         <div id="virtual">
-     <div class="form-group col-md-12">
-         <label>Virtual Link</label>
-      <input type="text" name="virtual_link" class="form-control" placeholder="http://" value="">
-           </div>
-           </div>
-
-
-
-
-
-
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Media Type:</label>
+        <div class="form-group col-md-6">
+           <label>Episotde Count:</label>
+       <input type="number" name="episode_count" class="form-control" value="1" id="episode_count" readonly="">
       </div>
-       <div class="col-75">
-     <input type="number" name="episode_count" class="form-control" value="1" id="episode_count" readonly="">
-     </div>
-    </div>
-    <br>
-        
-     <div class="row">
+
+       <div class="row">
       <div class="col-25">
         <div class="panel panel-default">
            <div class="panel-heading">
@@ -607,17 +586,14 @@ nav ul ul ul li { position: static;
 
 
 
+         <div id="virtual">
+     <div class="form-group col-md-12">
+         <label>Virtual Link</label>
+      <input type="text" name="virtual_link" class="form-control" placeholder="http://" value="">
+           </div>
+           </div>
 
-
-
-
-
-
-
-
-
-
-     <div class="row">
+ <div class="row">
       <div class="col-25">
         <label for="country">Product Status:</label>
       </div>
@@ -628,6 +604,35 @@ nav ul ul ul li { position: static;
         </select>
       </div>
     </div>
+
+
+
+
+
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Media Type:</label>
+      </div>
+       <div class="col-75">
+     <input type="number" name="episode_count" class="form-control" value="1" id="episode_count" readonly="">
+     </div>
+    </div>
+    <br>
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <br>
     <div class="row">
       <input type="submit"  class="btn btn-success" value="Save">
