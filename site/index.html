@@ -14,8 +14,64 @@
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<style>
 	 <style>
+
+    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.show-menu {
+  width: auto;
+  margin: 0 auto;
+  padding: 0.3em;
+  cursor: pointer;
+  text-align: center;
+  background-color:#272727;
+  border-radius: 50px;
+  color: white;
+  
+}
+
+       a, a:hover, a:focus {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+    list-style-type: none;
+}
+
+
+
+ul  {
+    padding: 14px 0;
+    list-style-type: none;
+}
+
+
+li a {
+    padding: 9px;
+    font-size: 1.1em;
+    display: block;
+    list-style-type: none;
+}
+  li a:hover {
+    color: #7386D5;
+    background: #fff ;
+    list-style-type: none;
+}
+
+ ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+    list-style-type: none;
+}
+ ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #d6bd70;
+}
   
 
 
@@ -76,13 +132,13 @@
 }
 
 .course-info ul li {
-  margin: 0 10px;
+  margin: 0 9px;
 }
 
 .course-info ul li a {
-  border-radius: 50%;
+  border-radius: 40%;
   color: #001F61;
-  font-size: 15px;
+  font-size: 12px;
   justify-content: center;
   align-items: center;
   height: 50px;
@@ -159,11 +215,11 @@
                         <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
                     </ul>
                 </div>
-            </nav>
+            
 
   <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-3 col-xs-12 col-md-3 col-lg-2 left-side navbar-inverse menu">
+                    <div class=" navbar-inverse menu">
                         <div class="show-menu">
                             <a id="show-xs-nav" class="visible-xs" href="javascript:void(0)">
                                 <span class="show-sp">
@@ -181,7 +237,7 @@
    <ul class="sidebar-menu adminMenu">                                    
        <li><a href="#"><i class="icon-home"></i> Home</a></li>
        <li>
-    <a href="javascript:void();" ><i class="icon-list" aria-hidden="true"></i> Products <span style="position: absolute; right:10px; top:12px;"><i class="fa fa-caret-down"></i></span></a>
+    <a href="javascript:void();" ><i class="icon-list" aria-hidden="true"></i> Products <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
                                 <ul class="dropdown">
                                     <li><a href="product.html">Add Product</a></li>
                                     <li><a href="p2.html">View Products</a></li>
@@ -189,43 +245,43 @@
                             </li>
 
          <li><a href="sales.html" ><i class="fa fa-shopping-basket" aria-hidden="true"></i> Sales </a></li>
-         <li><a href="#" ><i class="fa fa-money" aria-hidden="true"></i> Refunds <span class="badge" style="position: absolute; right:10px; top:12px; background:#ca4a1f;" id="refundCounter"></span></a></li>
+         <li><a href="ivix.html" ><i class="fa fa-money" aria-hidden="true"></i> Refunds <span class="badge" style="position: absolute; right:10px; background:#ca4a1f;" id="refundCounter"></span></a></li>
            <li><a href="#" ><i class="ti-archive" aria-hidden="true"></i> Coupons</a></li>
-           <li><a href="#" ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Orders <span class="badge" style="position: absolute; right:10px; top:12px; background:#ca4a1f;" id="orderCounter"></span></a></li>
+           <li><a href="#" ><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Orders <span class="badge" style="position: absolute; right:10px;  background:#ca4a1f;" id="orderCounter"></span></a></li>
             <li>
-               <a href="javascript:void();" ><i class="ti-credit-card" aria-hidden="true"></i> Affiliate Urls  <span style="position: absolute; right:10px; top:12px;"><i class="fa fa-caret-down"></i></span></a>
+               <a href="javascript:void();" ><i class="ti-credit-card" aria-hidden="true"></i> Affiliate Urls  <span style="position: absolute; right:10px; ;"><i class="fa fa-caret-down"></i></span></a>
                                 <ul class="dropdown">
                    <li><a href="#">Product Urls</a></li>
                    <li><a href="#">Vendor Url</a></li>
                                 </ul>
                             </li>
          <li>
-         <a href="javascript:void();" ><i class="ti-cloud" aria-hidden="true"></i> Referrals <span style="position: absolute; right:10px; top:12px;"><i class="fa fa-caret-down"></i></span></a>
+         <a href="javascript:void();" ><i class="ti-cloud" aria-hidden="true"></i> Referrals <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
          <ul class="dropdown">
         <li><a href="#">Products</a></li>
         <li><a href="#">Vendors</a></li>
            </ul>
            </li>
          <li><a href="#" ><i class="fa fa-shopping-basket" aria-hidden="true"></i> Affiliate Sales </a></li>
-         <li><a href="#" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Affiliate Orders <span class="badge" style="position: absolute; right:10px; top:12px; background:#ca4a1f;" id="affiliateOrderCounter"></span></a></li>
+         <li><a href="#" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Affiliate Orders <span class="badge" style="position: absolute; right:10px; background:#ca4a1f;" id="affiliateOrderCounter"></span></a></li>
            <li><a href="#" ><i class="icon-tag" aria-hidden="true"></i> Commissions</a></li>
            <li>
-            <a href="javascript:void();" ><i class="ti-credit-card" aria-hidden="true"></i> Withdrawal <span style="position: absolute; right:10px; top:12px;"><i class="fa fa-caret-down"></i></span></a>
+            <a href="javascript:void();" ><i class="ti-credit-card" aria-hidden="true"></i> Withdrawal <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
           <ul class="dropdown">
            <li><a href="#">Track Request</a></li>
            <li><a href="#">Withdrawal Form</a></li>
              </ul>
             </li>
-            <li><a href="#" ><i class="fa fa-envelope" aria-hidden="true"></i> Alerts/Messages <span class="badge" style="position: absolute; right:10px; top:12px; background:#ca4a1f;" id="messageCounter"></span></a></li>
+            <li><a href="#" ><i class="fa fa-envelope" aria-hidden="true"></i> Alerts/Messages <span class="badge" style="position: absolute; right:10px;  background:#ca4a1f;" id="messageCounter"></span></a></li>
                             <li>
-            <a href="javascript:void();" ><i class="icon-handbag" aria-hidden="true"></i> Shop <span style="position: absolute; right:10px; top:12px;"><i class="fa fa-caret-down"></i></span></a>
+            <a href="javascript:void();" ><i class="icon-handbag" aria-hidden="true"></i> Shop <span style="position: absolute; right:10px;"><i class="fa fa-caret-down"></i></span></a>
              <ul class="dropdown">
           <li><a href="#">Shop Info</a></li>
            <li><a href="#">Payment Info</a></li>
           <li><a href="#">Social Accounts</a></li>
                                 </ul>
                             </li>
-          <li><a href="javascript:void();" ><i class="fa fa-newspaper-o" aria-hidden="true"></i> Blog <span style="position: absolute; right:10px; top:12px;"><i class="fa fa-caret-down"></i></span></a>
+          <li><a href="javascript:void();" ><i class="fa fa-newspaper-o" aria-hidden="true"></i> Blog <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
                                 <ul class="dropdown">
                                     <li><a href="#">New Post</a></li>
                                     <li><a href="#">My Posts</a></li>
@@ -233,7 +289,7 @@
            <li><a href="#">All Posts</a></li>
              </ul>
                             </li>
-            <li><a href="javascript:void();" ><i class="fa fa-question-circle" aria-hidden="true"></i> Self Help <span style="position: absolute; right:10px; top:12px;"><i class="fa fa-caret-down"></i></span></a>
+            <li><a href="javascript:void();" ><i class="fa fa-question-circle" aria-hidden="true"></i> Self Help <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
                                 <ul class="dropdown">
                                     <li><a href="#">Post New Help</a></li>
                                     <li><a href="#">Sub-Categories</a></li>
@@ -243,8 +299,7 @@
           <li><a href="#"><i class="icon-user"></i> Update Profile</a></li>
                    </ul>
                  </div>
-       <div class="col-sm-9 col-xs-12 col-md-9 col-lg-10 col-sm-offset-3 col-md-offset-3 col-lg-offset-2">
-
+                 </nav>
 </body>
 </html>
 
