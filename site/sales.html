@@ -12,6 +12,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
    <link href="https://www.getvalue.co/assets/css/summernote.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+
+<script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+
 </head>
 <body>
 <style>
@@ -202,21 +209,19 @@ li a {
 
 
 
-
-     <div class="courses-container">
-  <div class="course">
-    <div class="course-info">
-      <p> Sales Record</p>
-                      <hr> 
-                        <div class="row">
-        <div class="col-md-12"></div>
-      <div class="form-group col-md-12">
-        <p>No any sale record...</p>
-                    <div class="panel-body p40">
-                        <div class="table-responsive pt20 pb20">
-    <table id="table_id" class="display" cellspacing="0" width="100%">
-       <thead>
-                                    <tr>
+ 
+    <div class="row p-t-20">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+ <div class="panel-heading">
+                        <h3 class="panel-title"> Sales Record</h3>
+                    </div>
+<div class="panel-body p40 row">
+<div class="table-responsive pt20 pb20">
+  <p>No any sale record...</p>
+<table id="table_id" class="table-bordered" cellspacing="0" width="100%">
+    <thead>
+        <tr>
                                         <th>#</th>
                                         <th>Product</th>
                                         <th>...</th>
@@ -229,35 +234,38 @@ li a {
                                         <th class="text-right">Total Price (Tsh.)</th>
                                     </tr>
                                 </thead>
-                                
-                  </tbody>
+                                <tbody>
+                                                                    </tbody>
                                 <tfoot>
                                     <tr>
                                         <td colspan="9"><b>Total</b></td>
+                                        <!-- <td class="text-left"></td> -->
+                                        <!-- <td class="text-center"></td> -->
                                         <td class="text-right">0</td>
                                     </tr>
                                 </tfoot>
+    <tbody>
+                                                                    </tbody>
                             </table>
-                        </div>
-                        <br>
-                        <p class="sm-hint">Scroll horizontal to view more</p>
-                    </div>
-                </div>
-                </div>
-<script>
-  $(document)
-  .ready(function () {
-    $('#table_id')
-      .DataTable();
-  });
+                            </div>
+            <p class="sm-hint">Scroll horizontal to view more</p>
+        </div>
+        </div>
+            </div>
+        </div>
 
-  $('#table_id')
-  .DataTable({
-    "destroy": true, // In order to reinitialize the datatable
-    "pagination": true, // For Pagination
-    "sorting": true, // For sorting
-    "aaData": data,
-  });
+
+
+
+  
+
+<script>
+ 
+   $(document).ready(function(){
+        $('#table_id').DataTable();
+
+    });
+
 </script>
   
 </head>
