@@ -16,21 +16,20 @@
 <body>
 	 <style>
 
-    @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
 
 body {
     font-family: 'Poppins', sans-serif;
 }
 
 .show-menu {
-  width: auto;
+  width: 619px;
   margin: 0 auto;
   padding: 0.3em;
   cursor: pointer;
   text-align: center;
   background-color:#272727;
   border-radius: 50px;
+  border: 1px solid #d6bd70;
   color: white;
   
 }
@@ -125,26 +124,21 @@ li a {
   letter-spacing: 1px;
 }
 
-.course-info ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.sidebar {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 16px;
 }
-
-.course-info ul li {
-  margin: 0 9px;
-}
-
-.course-info ul li a {
-  border-radius: 40%;
-  color: #001F61;
-  font-size: 12px;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 50px;
+.sidebar a {
+  padding: 6px 8px 6px 16px;
   text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
 }
+
 
 
 
@@ -187,6 +181,11 @@ li a {
   margin-top: 20px;
   text-align: center;
   font-size: 18px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 
 </style>
@@ -235,7 +234,7 @@ li a {
 
 
    <ul class="sidebar-menu adminMenu">                                    
-       <li><a href="#"><i class="icon-home"></i> Home</a></li>
+       <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
        <li>
     <a href="javascript:void();" ><i class="icon-list" aria-hidden="true"></i> Products <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
                                 <ul class="dropdown">
@@ -261,45 +260,46 @@ li a {
          <li>
          <a href="javascript:void();" ><i class="ti-cloud" aria-hidden="true"></i> Referrals <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
          <ul class="dropdown">
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Vendors</a></li>
+        <li><a href="p3.html">Products</a></li>
+        <li><a href="v.html">Vendors</a></li>
            </ul>
            </li>
-         <li><a href="#" ><i class="fa fa-shopping-basket" aria-hidden="true"></i> Affiliate Sales </a></li>
-         <li><a href="#" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Affiliate Orders <span class="badge" style="position: absolute; right:10px; background:#ca4a1f;" id="affiliateOrderCounter"></span></a></li>
-           <li><a href="#" ><i class="icon-tag" aria-hidden="true"></i> Commissions</a></li>
+         <li><a href="aff.html" ><i class="fa fa-shopping-basket" aria-hidden="true"></i> Affiliate Sales </a></li>
+         <li><a href="affl.html" ><i class="fa fa-shopping-cart" aria-hidden="true"></i> Affiliate Orders <span class="badge" style="position: absolute; right:10px; background:#ca4a1f;" id="affiliateOrderCounter"></span></a></li>
+
+           <li><a href="cossio.html" ><i class="icon-tag" aria-hidden="true"></i> Commissions</a></li>
            <li>
             <a href="javascript:void();" ><i class="ti-credit-card" aria-hidden="true"></i> Withdrawal <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
           <ul class="dropdown">
-           <li><a href="#">Track Request</a></li>
-           <li><a href="#">Withdrawal Form</a></li>
+           <li><a href="track.html">Track Request</a></li>
+           <li><a href="Withdrawal.html">Withdrawal Form</a></li>
              </ul>
             </li>
-            <li><a href="#" ><i class="fa fa-envelope" aria-hidden="true"></i> Alerts/Messages <span class="badge" style="position: absolute; right:10px;  background:#ca4a1f;" id="messageCounter"></span></a></li>
+            <li><a href="alert.html" ><i class="fa fa-envelope" aria-hidden="true"></i> Alerts/Messages <span class="badge" style="position: absolute; right:10px;  background:#ca4a1f;" id="messageCounter"></span></a></li>
                             <li>
             <a href="javascript:void();" ><i class="icon-handbag" aria-hidden="true"></i> Shop <span style="position: absolute; right:10px;"><i class="fa fa-caret-down"></i></span></a>
              <ul class="dropdown">
-          <li><a href="#">Shop Info</a></li>
-           <li><a href="#">Payment Info</a></li>
-          <li><a href="#">Social Accounts</a></li>
+          <li><a href="sop.html">Shop Info</a></li>
+           <li><a href="pat.html">Payment Info</a></li>
+          <li><a href="Social.html">Social Accounts</a></li>
                                 </ul>
                             </li>
           <li><a href="javascript:void();" ><i class="fa fa-newspaper-o" aria-hidden="true"></i> Blog <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="#">New Post</a></li>
-                                    <li><a href="#">My Posts</a></li>
-           <li><a href="#">Pending Posts</a></li>
-           <li><a href="#">All Posts</a></li>
+                                    <li><a href="post.html">New Post</a></li>
+                                    <li><a href="wpo.html">My Posts</a></li>
+           <li><a href="pedd.html">Pending Posts</a></li>
+           <li><a href="all.html">All Posts</a></li>
              </ul>
                             </li>
             <li><a href="javascript:void();" ><i class="fa fa-question-circle" aria-hidden="true"></i> Self Help <span style="position: absolute; right:10px; "><i class="fa fa-caret-down"></i></span></a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Post New Help</a></li>
-                                    <li><a href="#">Sub-Categories</a></li>
-                                    <li><a href="#">All Help</a></li>
+                                    <li><a href="elp.html">Post New Help</a></li>
+                                    <li><a href="sb.html">Sub-Categories</a></li>
+                                    <li><a href="allp.html">All Help</a></li>
                                 </ul>
                             </li>
-          <li><a href="#"><i class="icon-user"></i> Update Profile</a></li>
+          <li><a href="pdate.html"><i class="icon-user"></i> Update Profile</a></li>
                    </ul>
                  </div>
                  </nav>
@@ -321,25 +321,20 @@ li a {
   <br>
      <p>or <a href="#">change your password</a></p>
      <h4>Next Steps</h4>
-     <ul>
-      <li><a href="#"><i class="fa fa-registered" style="color:#868686" aria-hidden="true"></i>  Add brand</a></li>
-      <br>
-        <li><a href="#"><i class="fa fa-plus" style="color:#868686" aria-hidden="true"></i>  Add product</a></li>
-         <br>
-        <li><a href="#"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  Add blog post</a></li>
-        <br>
-        <li><a href="#"><i class="fa fa-list" style="color:#868686" aria-hidden="true"></i>  view product</a></li>
-     </ul>
+     <div class="sidebar">
+  <a href="#"><i class="fa fa-registered" style="color:#868686" aria-hidden="true"></i>  Add brand</a>
+<a href="#"><i class="fa fa-plus" style="color:#868686" aria-hidden="true"></i>  Add product</a>
+<a href="#"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  Add blog post</a>
+<a href="#"><i class="fa fa-list" style="color:#868686" aria-hidden="true"></i>  view product</a>
+</div>
+    
      <h4>More Actions</h4>
-     <ul>
-      <li><a href="#"><i class="fa fa-cart-arrow-down" style="color: #868686" aria-hidden="true"></i>  Order</a></li>
-      <br>
-      <li><a href="#"><i class="fa fa-tags" style="color: #868686" aria-hidden="true"></i>  Commissions</a></li>
-       <br>
-        <li><a href="#"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  My post</a></li>
-      <br>
-      <li><a href="#"><i class="fa fa-shopping-bag" style="color:#868686" aria-hidden="true"></i>  Payment Info</a></li>
-     </ul>
+      <div class="sidebar">
+    <a href="#"><i class="fa fa-cart-arrow-down" style="color: #868686" aria-hidden="true"></i>  Order</a>
+      <a href="#"><i class="fa fa-tags" style="color: #868686" aria-hidden="true"></i>  Commissions</a>
+       <a href="#"><i class="fa fa-newspaper-o" style="color:#868686" aria-hidden="true"></i>  My post</a>
+     <a href="#"><i class="fa fa-shopping-bag" style="color:#868686" aria-hidden="true"></i>  Payment Info</a>
+     </div>
     </div>
   </div>
 </div>
