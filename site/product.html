@@ -166,6 +166,8 @@ input[type=submit] {
 </head>
 <body>
 
+
+
           <div id="wrapper"  style="background: #f1f1f1;">
         <div id="content">
             <nav class="navbar navbar-inverse">
@@ -303,107 +305,177 @@ input[type=submit] {
       </center>
       </div>
     </div>
-      <form action="action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">Product Name:</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="ProductName" >
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Brand:</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="Brand" >
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Category:</label>
-      </div>
-      <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Select</option>
+
+    <form action="/action_page.php">
+
+      <div class="form-group col-md-6">
+           <label for="fname">Product Name:</label>
+    <input type="text" id="fname" name="firstname" >
+        </div>
+
+         <div class="form-group col-md-6">
+           <label for="lname">Brand:</label>
+    <input type="text" id="lname" name="lastname">
+        </div>
+
+
+         <div class="form-group col-md-6">
+           <label for="country">Category:</label>
+    <select id="country" name="country">
+      <option value="australia">Select</option>
           <option value="canada">Ebooks</option>
           <option value="usa">Audiobooks</option>
           <option value="usa">Online Training & Programs</option>
-        </select>
-      </div>
-    </div>
-     <div class="row">
-      <div class="col-25">
-        <label for="lname">Price:</label>
-      </div>
-      <div class="col-75">
-        <input type="number" id="lname" name="tentacles">
-      </div>
-    </div>
-     <div class="row">
-      <div class="col-25">
-        <label for="lname">Quantity:</label>
-      </div>
-      <div class="col-75">
-       <input type="number" id="lname" name="tentacles">
-      </div>
-    </div>
-
-
-    
-
-
-
-
-
-
-     <div class="row">
-      <div class="col-25">
-        <label for="subject">Summary:</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject"  style="height:80px"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Description:</label>
-      </div>
-      <div class="col-75">
-      <textarea class="form-control summernote" name="description"></textarea>
-      </div>
-    </div>
-    <br>
-
-    <div class="row">
-      <div class="col-25">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-               <h4 class="panel-title">Preview Files</h4>
+    </select>
         </div>
-           <div class="panel-body row">
-        <div class="form-group col-md-3">
-           <select class="form-control" name="preview_type">
-               <option value="">Select Type</option>
-               <option value="image" >Image</option>
-               <option value="pdf" >PDF</option>
-               <option value="audio" >Audio</option>
-               <option value="video" >Video</option>
-               <option value="docs" >Docs</option>
-           </select>
-            </div>
-               <div class="form-group col-md-6">
-                     <input type="text" id="previewHolder" readonly="" disabled="" class="form-control" placeholder="No file selected" value="">
-                           </div>
-                     <div class="form-group col-md-3">
-                      <label for="previewImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Upload</span></label>
-                       <a href="" id="previewLink" target="_blank" class="btn btn-sm btn-default"><i class="fa fa-search"></i></a>
-                      </div>
-                 </div>
-                   </div>
-                 </div>
-    </div>
+
+         <div class="form-group col-md-6">
+          <label for="lname">Price:</label>
+    <input type="text" id="lname" name="lastname">
+        </div>
+         <div class="form-group col-md-6">
+           <label for="lname">Quantity:</label>
+    <input type="text" id="lname" name="lastname">
+
+        </div>
+
+         <div class="form-group col-md-6">
+          <label for="subject">Summary:</label>
+    <textarea id="subject" name="subject"  style="height:50px"></textarea>
+        </div>
+   
+    <div class="form-group col-md-6">
+          <label for="subject">Description:</label>
+    <textarea id="subject" name="subject" style="height:50px"></textarea>
+        </div>
+   
+   
+   
+   
+   
+   
+
+   
+
+   
+
+    
+   
+    
+    
+    <br>
+    <br>
+
+
+
+<div class="col-md-12">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">Preview Files</h4>
+                                            </div>
+                                            <div class="panel-body row">
+                                                <div class="form-group col-md-3">
+                                                    <select class="form-control" name="preview_type">
+                                                        <option value="">Select Type</option>
+                                                        <option value="image" >Image</option>
+                                                        <option value="pdf" >PDF</option>
+                                                        <option value="audio" >Audio</option>
+                                                        <option value="video" >Video</option>
+                                                        <option value="docs" >Docs</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" id="previewHolder" readonly="" disabled="" class="form-control" placeholder="No file selected" value="">
+                                                    <input type="file" name="preview" id="previewImg" style=""  accept="" src="" onchange="setFileName(this, 'previewHolder', 'previewLink');"/>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="previewImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Upload</span></label>
+                                                    <a href="" id="previewLink" target="_blank" class="btn btn-sm btn-default"><i class="fa fa-search"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Downloadable Media Type:</label>
+                                        <select class="form-control" name="downloadable_media_type" onchange="checkDFile();" id="downloadable_media_type">
+                                            <option value="downloadable" >Media File</option>
+                                            <option value="virtual" >Virtual Products Link</option>
+                                        </select>
+                                    </div>
+                                    <div id="downloadable">
+                                        <div class="form-group col-md-6">
+                                            <label>Media Type:</label>
+                                            <select class="form-control" name="media_type">
+                                                <option value="">Select</option>
+                                                <option value="image" >Image</option>
+                                                <option value="pdf" >PDF</option>
+                                                <option value="audio" >Audio</option>
+                                                <option value="video" >Video</option>
+                                                <option value="docs" >Docs</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                                                                        <label>Episode Count:</label>
+                                            <input type="number" name="episode_count" class="form-control" value="1" id="episode_count" readonly="">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <h4 class="panel-title">Downloadable Media Files</h4>
+                                                </div>
+                                                <div class="panel-body row">
+                                                    <div id="mediaList">
+                                                                                                                <div>
+                                                            <div class="form-group col-md-4">
+                                                                <input type="text" class="form-control" name="media_file_name1" placeholder="File name" value="">
+                                                            </div>
+                                                            <div class="form-group col-md-5">
+                                                                <input type="text" class="form-control" id="mediaFile" disabled="" placeholder="No file selected" value="">
+                                                                <input type="file" name="media1" id="mediaImg" style=""  accept="" src="" class="mediaFile" onchange="setFileName(this, 'mediaFile', 'mediaLink');"/>
+                                                            </div>
+                                                            <div class="form-group col-md-3">
+                                                                <label for="mediaImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Upload</span></label>
+                                                                <a href="" id="mediaLink" target="_blank" class="btn btn-sm btn-default"><i class="fa fa-search"></i></a>
+                                                            </div>
+                                                        </div>
+                                                                                                            </div>
+                                                    <div class="form-group col-md-12">
+                                                        <a href="javascript:void();" class="btn btn-sm btn-default" onclick="addFile();"><i class="fa fa-plus"></i> Add File</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="virtual">
+                                        <div class="form-group col-md-12">
+                                            <label>Virtual Link</label>
+                                            <input type="text" name="virtual_link" class="form-control" placeholder="http://" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label>Product Status:</label>
+                                        <select class="form-control" name="product_status">
+                                            <option value="live" >Live Product</option>
+                                            <option value="preorder" >Pre-order Product</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="col-md-12" id="resultMsg"></div>
+                                    <div class="col-md-12 p-t-10">
+                        <a href="javascript:void();" class="btn btn-success mr-2 turnOnProgress" id="saveBtn">Save</a>                                                                       
+                                    </div>
+                                </div>
+                            </form>
+
+
+      
+
+   
+      
+       
+                 
+  
+
 
     
 
@@ -411,120 +483,11 @@ input[type=submit] {
 
 
 
-    <div class="row">
-      <div class="col-25">
-        <label >Downloadable Media Type:</label>
-      </div>
-        <select class="form-control" name="downloadable_media_type" onchange="checkDFile();" id="downloadable_media_type">
-              <option value="downloadable" >Media File</option>
-             <option value="virtual" >Virtual Products Link</option>
-         </select>
-      </div>
+  
+
+
+
      
-
-   <div id="downloadable">
-     <div class="form-group col-md-6">
-     <label>Media Type:</label>
-       <select class="form-control" name="media_type">
-       <option value="">Select</option>
-       <option value="image" >Image</option>
-        <option value="pdf" >PDF</option>
-        <option value="audio" >Audio</option>
-       <option value="video" >Video</option>
-       <option value="docs" >Docs</option>
-        </select>
-       </div>
-        <div class="form-group col-md-6">
-           <label>Episotde Count:</label>
-       <input type="number" name="episode_count" class="form-control" value="1" id="episode_count" readonly="">
-      </div>
-
-       <div class="row">
-      <div class="col-25">
-        <div class="panel panel-default">
-           <div class="panel-heading">
-               <h4 class="panel-title">Downloadable Media Files</h4>
-                  </div>
-           <div class="panel-body row">
-    <div id="mediaList">
-                   <div>
-         <div class="form-group col-md-4">
-     <input type="text"  name="media_file_name1" placeholder="File name" value="">
-     </div>
-      <div class="form-group col-md-5">
-          <input type="text"  id="mediaFile" disabled="" placeholder="No file selected" value="">
-          </div>
-            <div class="form-group col-md-3">
-          <label for="mediaImg" class="btn btn-sm btn-info waves-effect waves-light"><span>Upload</span></label>
-         <a href="" id="mediaLink" target="_blank" class="btn btn-sm btn-default"><i class="fa fa-search"></i></a>
-              </div>
-          </div>
-             </div>
-         <div class="form-group col-md-12">
-          <a href="javascript:void();" class="btn btn-sm btn-default" onclick="addFile();"><i class="fa fa-plus"></i> Add File</a>
-            </div>
-                  </div>
-              </div>
-             </div>
-         </div>
-
-
-
-         <div id="virtual">
-     <div class="form-group col-md-12">
-         <label>Virtual Link</label>
-      <input type="text" name="virtual_link" class="form-control" placeholder="http://" value="">
-           </div>
-           </div>
-
- <div class="row">
-      <div class="col-25">
-        <label for="country">Product Status:</label>
-      </div>
-     <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Live Product</option>
-          <option value="canada">Pre-order Product</option>
-        </select>
-      </div>
-    </div>
-
-
-
-
-
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Media Type:</label>
-      </div>
-       <div class="col-75">
-     <input type="number" name="episode_count" class="form-control" value="1" id="episode_count" readonly="">
-     </div>
-    </div>
-    <br>
-        
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    <br>
-    <div class="row">
-      <input type="submit"  class="btn btn-success" value="Save">
-    </div>
-  </form>
-    </div>
-  </div>
-</div>
 
 
 
